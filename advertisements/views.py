@@ -13,7 +13,7 @@ class AdvertisementViewSet(ModelViewSet):
     queryset = Advertisement.objects.all()
     serializer_class = AdvertisementSerializer
     permission_classes = [IsOwnerOrViewOnly, IsAuthenticated]
-    
+    filterset_fields = ['status']
     
     # def get_permissions(self, request, ):
     #     """Получение прав для действий."""
